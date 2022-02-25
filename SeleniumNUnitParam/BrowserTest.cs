@@ -12,17 +12,18 @@ namespace SeleniumNUnitParam
     {
 
 
-        //[Test]
-        //public void GoogleTest()
-        //{
-        //    Driver.Navigate().GoToUrl("http://www.google.com");
-        //    Driver.FindElement(By.Name("q")).SendKeys("Selenium");
-        //    System.Threading.Thread.Sleep(5000);
-        //    Driver.FindElement(By.Name("gNO89b")).Click();
-        //    Assert.That(Driver.PageSource.Contains("Selenium"), Is.EqualTo(true),
-        //                                    "The text selenium doest not exist");
+        [Test]
+        [Ignore("not to include as test case")]
+        public void GoogleTest()
+        {
+            Driver.Navigate().GoToUrl("http://www.google.com");
+            Driver.FindElement(By.Name("q")).SendKeys("Selenium");
+            System.Threading.Thread.Sleep(5000);
+            Driver.FindElement(By.Name("gNO89b")).Click();
+            Assert.That(Driver.PageSource.Contains("Selenium"), Is.EqualTo(true),
+                                            "The text selenium doest not exist");
 
-        //}
+        }
 
         [Test]
         public void ExecuteAutomationTest()
